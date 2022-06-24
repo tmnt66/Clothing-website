@@ -12,7 +12,6 @@ import { setCurrentUser } from './components/redux/action';
 
 class App extends React.Component {
   unSubscribeFromAuth = null
-  
   componentDidMount() {
     const {setCurrentUser} = this.props
     this.unSubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -51,7 +50,6 @@ class App extends React.Component {
           {/* <Route  path='/list/:topicId' element = {<ListPage/>}/> */}
           <Route path='/signin' element={<SignInAndSignUpPage />} />
         </Routes>
-
       </div>
     );
   }
